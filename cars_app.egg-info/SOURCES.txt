@@ -1,0 +1,5 @@
+setup.py
+cars_app.egg-info/PKG-INFO
+cars_app.egg-info/SOURCES.txt
+cars_app.egg-info/dependency_links.txt
+cars_app.egg-info/top_level.txt
