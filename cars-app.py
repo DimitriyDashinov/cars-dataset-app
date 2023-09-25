@@ -96,16 +96,11 @@ class Cars:
 
     def cars_made_by_year(self):
         '''Print a table with number of cars made each year'''    
-
-        try:
-            if  self.year > pd.to_datetime(date.today()):
-                raise ValueError("Year must be between 1885 and current year")
-        except:
-            self.data['Year'] = pd.to_datetime(self.data['Year']).dt.strftime('%Y')
-            pivot = pd.pivot_table(self.data, values = 'Name', index = 'Year', aggfunc='count')
-            pivot = pivot.sort_values(by='Year', ascending=False)
-            print("Number of cars by origin")
-            print(tabulate(pivot, headers=['Year', 'N cars made'], tablefmt='fancy_grid'))
+        self.data['Year'] = pd.to_datetime(self.data['Year']).dt.strftime('%Y')
+        pivot = pd.pivot_table(self.data, values = 'Name', index = 'Year', aggfunc='count')
+        pivot = pivot.sort_values(by='Year', ascending=False)
+        print("Number of cars by origin")
+        print(tabulate(pivot, headers=['Year', 'N cars made'], tablefmt='fancy_grid'))
             
 cars_pd_dataset = Cars(cars_pd_dataset)
 

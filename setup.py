@@ -11,3 +11,9 @@ setup(
     long_description_content_type="text",
     url="https://github.com/DimitriyDashinov/cars-dataset-app",
 )
+
+setup(
+    
+    setup_requires=['pytest-runner'],
+    tests_require=['pytest'],
+)

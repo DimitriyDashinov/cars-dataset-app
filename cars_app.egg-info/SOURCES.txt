@@ -1,3 +1,4 @@
+setup.cfg
 setup.py
 cars_app.egg-info/PKG-INFO
 cars_app.egg-info/SOURCES.txt
